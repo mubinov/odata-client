@@ -125,7 +125,10 @@ class Service
 
         $version = $response->getHeaderLine('DataServiceVersion');
         if ('' === $version) {
-            throw new ServerErrorException('DataServiceVersion header missed');
+            $version = $response->getHeaderLine('OData-Version');
+            if('' === $version) {
+                throw new ServerErrorException('DataServiceVersion header missed');
+            }
         }
 
         $doc = $this->documentFactory->parseXML((string) $response->getBody());
