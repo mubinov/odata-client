@@ -1,6 +1,6 @@
 {
-    "name": "mekras/odata-client",
-    "description": "OData client-side library",
+    "name": "mubinov/odata-client",
+    "description": "Forked from OData client-side library (mekras/odata-client)",
     "type": "library",
     "license": "MIT",
     "keywords": ["OData"],
